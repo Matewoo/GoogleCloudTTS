@@ -14,12 +14,12 @@
         
         <StackPanel Grid.Column="0" Spacing="10" Orientation="Horizontal" VerticalAlignment="Center">
             <avalonia:MaterialIcon Kind="Timer" Margin="5,0,0,0" Width="20" Height="20"/>
-            <TextBlock Text="Delay"/>
+            <TextBlock Text="Pause"/>
         </StackPanel>
         
         <StackPanel Grid.Column="2" Spacing="15" Orientation="Horizontal" VerticalAlignment="Center">
             <NumericUpDown Name="PART_Delay" Classes="Large" Maximum="60" Minimum="0" Value="5.0" VerticalAlignment="Center"/>
-            <TextBlock Text="Seconds" VerticalAlignment="Center"/>
+            <TextBlock Text="Sekunden" VerticalAlignment="Center"/>
         </StackPanel>
         
     </Grid>

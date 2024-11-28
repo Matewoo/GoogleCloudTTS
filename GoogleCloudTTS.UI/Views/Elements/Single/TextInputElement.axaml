@@ -22,13 +22,13 @@
         
             <StackPanel Orientation="Vertical" Spacing="4">
                 <TextBlock Text="Text" FontSize="11"/>
-                <TextBox Name="PART_Text" KeyDown="PART_Text_OnKeyDown" Watermark="Please remember to submit the report on Friday and confirm the meeting with the marketing team." MaxWidth="{Binding ElementName=PART_Settings, Path=Bounds.Width}"/>
+                <TextBox Name="PART_Text" KeyDown="PART_Text_OnKeyDown" Watermark="Hier den zu sprechenden Text eingeben." MaxWidth="{Binding ElementName=PART_Settings, Path=Bounds.Width}"/>
             </StackPanel>
             
             <StackPanel Name="PART_Settings" Orientation="Horizontal" Spacing="40">
                 
                 <StackPanel Orientation="Vertical" Spacing="4">
-                    <TextBlock Text="Language" FontSize="11"/>
+                    <TextBlock Text="Sprache" FontSize="11"/>
                     <ComboBox Name="PART_LanguageCombobox" MinWidth="100" SelectionChanged="PART_LanguageCombobox_OnSelectionChanged"/>
                 </StackPanel>
                 
@@ -38,7 +38,7 @@
                 </StackPanel>
                 
                 <StackPanel Orientation="Vertical" Spacing="4">
-                    <TextBlock Text="Voice" FontSize="11"/>
+                    <TextBlock Text="Stimme" FontSize="11"/>
                     <ComboBox Name="PART_VoiceCombobox" MinWidth="100" SelectionChanged="PART_VoiceCombobox_OnSelectionChanged"/>
                 </StackPanel>
                 
@@ -47,7 +47,7 @@
                     <StackPanel Orientation="Vertical" Spacing="4">
                         
                         <StackPanel Orientation="Horizontal" Spacing="5">
-                            <TextBlock Text="Speed" FontSize="12"/>
+                            <TextBlock Text="Geschwindigkeit" FontSize="12"/>
                             <TextBlock Text="{Binding ElementName=PART_SpeedSlider, Path=Value, StringFormat={}{0:N2}}" FontSize="12"/>
                         </StackPanel>
                         
@@ -63,7 +63,7 @@
                     <StackPanel Orientation="Vertical" Spacing="4">
                         
                         <StackPanel Orientation="Horizontal" Spacing="5">
-                            <TextBlock Text="Pitch" FontSize="12"/>
+                            <TextBlock Text="Stimmhöhe" FontSize="12"/>
                             <TextBlock Text="{Binding ElementName=PART_PitchSlider, Path=Value, StringFormat={}{0:N2}}" FontSize="12"/>
                         </StackPanel>
 

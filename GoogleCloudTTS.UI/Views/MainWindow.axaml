@@ -13,7 +13,7 @@
         x:Class="GoogleCloudTTS.UI.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="GoogleCloudTTS">
+        Title="telc VoiceGen">
 
     <Grid>
         <DockPanel Dock="Top">
@@ -30,13 +30,13 @@
                                 HorizontalAlignment="Left"
                                 Margin="0,10,0,0">
                         
-                        <icons:MaterialIcon Kind="Brain" 
+                        <icons:MaterialIcon Kind="AccountVoice" 
                                             Width="25" 
                                             Height="25"/>
                         
                         <StackPanel Orientation="Horizontal" 
                                     Spacing="5">
-                            <TextBlock Text="GoogleCloudTTS" FontSize="14"/>
+                            <TextBlock Text="telc VoiceGen" FontSize="14"/>
                             <TextBlock Text="/" FontSize="14" Foreground="Gray"/>
                             <TextBlock Text="Home" FontSize="14" Foreground="Gray"/>
                         </StackPanel>
@@ -47,21 +47,22 @@
                                 VerticalAlignment="Center"
                                 Margin="0,10,0,10">
                         <Menu>
-                            <MenuItem>
+                            <MenuItem Background="DeepSkyBlue">
                                 <MenuItem.Header>
                                     <StackPanel Orientation="Horizontal" Spacing="10">
-                                        <TextBlock Text="Add"/>
+                                        <TextBlock Text="Hinzufügen"/>
                                         <icons:MaterialIcon Kind="Add"/>
                                     </StackPanel>
                                 </MenuItem.Header>
+
                                 
-                                <MenuItem Header="Delay" 
+                                <MenuItem Header="Stimme" 
+                                          Command="{Binding AddTextElementCommand}"/>
+								
+								<MenuItem Header="Pause"
                                           Command="{Binding AddDelayElementCommand}"/>
                                 
-                                <MenuItem Header="Text" 
-                                          Command="{Binding AddTextElementCommand}"/>
-                                
-                                <MenuItem Header="Sound" 
+                                <MenuItem Header="Ton" 
                                           Command="{Binding AddSoundElementCommand}"/>
                             </MenuItem>
                         </Menu>
@@ -146,21 +147,21 @@
                                HorizontalAlignment="Left"
                                VerticalAlignment="Center">
                     
-                       <TextBlock Text="Export:" FontSize="12"/>
+                       <TextBlock Text="Exportieren:" FontSize="12"/>
                     
                        <DropDownButton Width="150"
                                        IsEnabled="{Binding !IsProcessing}">
                            <DropDownButton.Flyout>
                                <MenuFlyout Placement="BottomEdgeAlignedRight">
-                                   <MenuItem Header="Export as MP3" Command="{Binding ExportAsMP3FileCommand}" />
-                                   <MenuItem Header="Export as WAV" Command="{Binding ExportAsWAVFileCommand}" />
+                                   <MenuItem Header="Exportieren als MP3" Command="{Binding ExportAsMP3FileCommand}" />
+                                   <MenuItem Header="Exportieren als WAV" Command="{Binding ExportAsWAVFileCommand}" />
                                </MenuFlyout>
                            </DropDownButton.Flyout>
                     
                            <DropDownButton.Content>
                                <StackPanel Orientation="Horizontal" Spacing="15">
                                    <icons:MaterialIcon Kind="Export" Width="15" Height="15" VerticalAlignment="Center"/>
-                                   <TextBlock Text="Export" VerticalAlignment="Center"/>
+                                   <TextBlock Text="Exportieren" VerticalAlignment="Center"/>
                                </StackPanel>
                            </DropDownButton.Content>
                     

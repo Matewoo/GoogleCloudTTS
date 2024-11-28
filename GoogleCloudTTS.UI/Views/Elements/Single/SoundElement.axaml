@@ -15,8 +15,8 @@
         </StackPanel>
         
         <StackPanel Grid.Column="2" Spacing="15" Orientation="Horizontal" VerticalAlignment="Center">
-            <TextBlock Text="Location:" VerticalAlignment="Center"/>
-            <TextBox Name="PART_FileLocation" Width="300" MaxWidth="300" Watermark="C:\Sound.mp3"/>
+            <TextBlock Text="Pfad:" VerticalAlignment="Center"/>
+            <TextBox Name="PART_FileLocation" Width="300" MaxWidth="300" Watermark="C:\Ton.mp3"/>
             <Button Name="PART_ChooseFile" Click="PART_ChooseFile_OnClick">Choose</Button>
         </StackPanel>
         
